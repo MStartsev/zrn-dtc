@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна</title>
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+    <!-- <script async src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <base target="_top">
+    <!-- Use a templated HTML printing scriptlet to import common stylesheet -->
+    <!-- <?!= HtmlService.createHtmlOutputFromFile('Stylesheet').getContent(); ?> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/jszip.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.mini.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div class="drop-zone">
+        <span class="drop-zone__prompt">Додати специфікацію</span>
+        <input type="file" name="myFile" class="drop-zone__input">
+    </div>
+
+    <input id="elem" type="button" value="Нажми меня!">
+    <div id="output">No result yet...</div>
+    <script>
+        elem.onclick = function () {
+            google.script.run.doSomething();
+        };
+    </script>
+
+
+
+    <!-- ↻⟷⟺⤶⤷⤸⤹©☎ ✓&#10003; ✗&#10007; ❘  ∟&#8735; ∞&#8735;  ∠&#8736; ∥&#8742;  ≈&#8776; ⊘&#8856 ⊗&#8855;
+⊞&#8862; ⊾&#8894; Δ&#916;  Σ &#931; 
+⋉&#8905; ⋊&#8906; 
+A-Z &#65; - &#90; -->
+
+
+    <!-- Use a templated HTML printing scriptlet to import JavaScript. -->
+    <!-- <?!= HtmlService.createHtmlOutputFromFile('dd').getContent(); ?> -->
+    <script src="./js/dd.js"></script>
+    <!-- Use a templated HTML printing scriptlet to import JavaScript. -->
+    <!-- <?!= HtmlService.createHtmlOutputFromFile('JavaScript').getContent(); ?> -->
+    <script src="./js/script.js"></script>
+
+
+    <!-- Read the sandbox mode (in a client-side script). -->

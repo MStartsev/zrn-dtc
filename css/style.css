@@ -1,0 +1,66 @@
+/* <!-- This CSS package applies Google styling; it should always be included. --> */
+/* <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css"> */
+/* <style> */
+
+.drop-zone {
+  width: 25vw;
+  max-width: 150px;
+  height: 30px;
+  max-height: 10vw;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  color: #cccccc;
+  border: 4px dashed #009578;
+  border-radius: 10px;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+
+.svgzrn {
+  margin: 1vw 35vw;
+  width: 30%;
+  padding: 0;
+  fill: green;
+}
+
+/* </style> */
