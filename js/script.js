@@ -300,3 +300,41 @@ let Specification = function () {
     }
   };
 };
+
+//------------------------------------------------------------------------------------------------------------------------------//
+
+function getServer() {
+  const url =
+    "https://script.google.com/macros/s/AKfycbyGdo3q8DXo6eT76ZjVH832FYVwJ-Kk0rmEKMvZof2xh7htQUmmvFXx0e_v18lxQa5q/exec";
+
+  fetch(url)
+    .then((d) => d.json())
+    .then((d) => {
+      document.getElementById("app").textContent = d[0].status;
+      console.log(d);
+    });
+}
+
+document.getElementById("btn").addEventListener("click", getServer);
+
+function postServer() {
+  const url =
+    "https://script.google.com/macros/s/AKfycbyGdo3q8DXo6eT76ZjVH832FYVwJ-Kk0rmEKMvZof2xh7htQUmmvFXx0e_v18lxQa5q/exec";
+  // let res = [{ status: "cool!", work: "Батя, я стараюсь!" }];
+  let res = [{ name: "Gogi", work: "Батя, я стараюсь!" }];
+
+  fetch(url, {
+    method: "POST",
+    mode: "no-cors",
+    cache: "no-cache",
+    // credential: "same-origin",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    direct: "fillow",
+    reffererPolicy: "no-refferer",
+    body: JSON.stringify({ name: "Gogi" }),
+  });
+}
+
+document.getElementById("btn1").addEventListener("click", postServer);
