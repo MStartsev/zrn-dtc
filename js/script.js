@@ -142,6 +142,8 @@ function exelToObj(exselObj) {
 
   ///////////////////////////////////////////////////////////////////////////////////
 
+  postServer();
+
   console.log(base);
 
   // google.script.run.withSuccessHandler(onSuccess).getBase(base);
@@ -305,12 +307,12 @@ let Specification = function () {
 
 function getServer() {
   const url =
-    "https://script.google.com/macros/s/AKfycbyGdo3q8DXo6eT76ZjVH832FYVwJ-Kk0rmEKMvZof2xh7htQUmmvFXx0e_v18lxQa5q/exec";
+    "https://script.google.com/macros/s/AKfycbx9eFKQXavMnMh-p-ohpSV2vd3v5qL0o2TqCr9VfxvLuPFJyO8AUJtE7awTBy-M-eNv/exec";
 
   fetch(url)
     .then((d) => d.json())
     .then((d) => {
-      document.getElementById("app").textContent = d[0].status;
+      document.getElementById("app").textContent = d[0].name;
       console.log(d);
     });
 }
@@ -319,9 +321,11 @@ document.getElementById("btn").addEventListener("click", getServer);
 
 function postServer() {
   const url =
-    "https://script.google.com/macros/s/AKfycbyGdo3q8DXo6eT76ZjVH832FYVwJ-Kk0rmEKMvZof2xh7htQUmmvFXx0e_v18lxQa5q/exec";
+    "https://script.google.com/macros/s/AKfycbx9eFKQXavMnMh-p-ohpSV2vd3v5qL0o2TqCr9VfxvLuPFJyO8AUJtE7awTBy-M-eNv/exec";
   // let res = [{ status: "cool!", work: "Батя, я стараюсь!" }];
   let res = [{ name: "Gogi", work: "Батя, я стараюсь!" }];
+
+  console.info(base);
 
   fetch(url, {
     method: "POST",
@@ -333,7 +337,7 @@ function postServer() {
     },
     direct: "fillow",
     reffererPolicy: "no-refferer",
-    body: JSON.stringify({ name: "Gogi" }),
+    body: JSON.stringify({ base }),
   });
 }
 
