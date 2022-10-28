@@ -3,10 +3,9 @@
 /* <style> */
 
 .drop-zone {
-  width: 25vw;
-  max-width: 150px;
-  height: 30px;
-  max-height: 10vw;
+  min-width: 150px;
+  max-width: 15vw;
+  min-height: 30px;
   padding: 5px;
   display: flex;
   align-items: center;
@@ -36,7 +35,7 @@
   overflow: hidden;
   background-color: #cccccc;
   background-size: cover;
-  position: relative;
+  /* position: relative; */
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -45,13 +44,11 @@
 
 .drop-zone__thumb::after {
   content: attr(data-label);
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  /* content: "Специфікація 647-3 Зміна 1 Замовник ТзОВ Кроноспан УА"; */
   width: 100%;
-  padding: 0;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  padding: 1vw;
+  color: #061e3d;
   font-size: 14px;
   text-align: center;
 }

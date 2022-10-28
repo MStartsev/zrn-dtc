@@ -64,16 +64,16 @@ function updateThumbnail(dropZoneElement, file) {
   thumbnailElement.dataset.label = file.name;
 
   // Show thumbnail for image files
-  if (file.type.startsWith("image/")) {
-    const reader = new FileReader();
+  //   if (file.type.startsWith("image/")) {
+  //     const reader = new FileReader();
 
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-    };
-  } else {
-    thumbnailElement.style.backgroundImage = null;
-  }
+  //     reader.readAsDataURL(file);
+  //     reader.onload = () => {
+  //       thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+  //     };
+  //   } else {
+  //     thumbnailElement.style.backgroundImage = null;
+  //   }
 }
 
 // </script>

@@ -337,7 +337,7 @@ function postServer() {
     },
     direct: "fillow",
     reffererPolicy: "no-refferer",
-    body: JSON.stringify({ base }),
+    body: JSON.stringify({ spec: base }),
   });
 }
 
